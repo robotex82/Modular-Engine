@@ -1,2 +1,2 @@
-require "<%= namespaced_name %>"
-require "<%= namespaced_name %>/engine"
+require '<%= namespaced_name %>'
+require '<%= namespaced_name %>/engine'

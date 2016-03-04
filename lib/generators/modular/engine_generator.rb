@@ -13,12 +13,7 @@ module Modular
     def app
       directory 'app'
       empty_directory_with_keep_file "app/assets/images/#{namespaced_name}"
-      empty_directory "app/decorators"
-      empty_directory_with_keep_file "app/decorators/controllers"
-      empty_directory_with_keep_file "app/decorators/models"
-      empty_directory_with_keep_file "app/overrides"
-      empty_directory_with_keep_file "app/views/#{namespaced_name}/overrides"
-
+      empty_directory_with_keep_file "app/services"
     end
 
     def readme
@@ -47,6 +42,7 @@ module Modular
       template "lib/tasks/%namespaced_name%_tasks.rake"
       template "lib/%namespaced_name%/version.rb"
       template "lib/%namespaced_name%/engine.rb"
+      template "lib/%namespaced_name%/configuration.rb"
     end
 
     def config
